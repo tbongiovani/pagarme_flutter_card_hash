@@ -10,15 +10,15 @@ import 'models/pagarme_card.dart';
 import 'models/pagarme_public_key.dart';
 
 class PagarMeFlutterCardHash {
-  String pagarMeApiKey;
-  PagarMeCard pagarMeCard;
+  String? pagarMeApiKey;
+  PagarMeCard? pagarMeCard;
 
   PagarMeFlutterCardHash({this.pagarMeApiKey, this.pagarMeCard});
 
   Future<String> generateCardHash() async {
     PagarMeApi pagarMeApi = PagarMeApi(pagarMeApiKey: this.pagarMeApiKey);
 
-    PagarMePublicKey pagarMePublicKey =
+    PagarMePublicKey? pagarMePublicKey =
         await pagarMeApi.generateEncryptionKeyAndId();
 
     PagarMeEncrypt pagarmeEncrypt = PagarMeEncrypt(

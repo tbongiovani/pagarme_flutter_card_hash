@@ -5,14 +5,14 @@
 import 'package:pagarme_flutter_card_hash/utils/json_utils.dart';
 
 class PagarMePublicKey {
-  String id;
-  String dateCreated;
-  String ip;
-  String publicKey;
+  String? id;
+  String? dateCreated;
+  String? ip;
+  String? publicKey;
 
   PagarMePublicKey({this.id, this.dateCreated, this.ip, this.publicKey});
 
-  static fromJson(Map<String, dynamic> json) {
+  static fromJson(Map<String, dynamic>? json) {
     if (json == null) {
       return null;
     }

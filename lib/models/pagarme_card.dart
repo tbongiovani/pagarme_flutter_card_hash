@@ -5,10 +5,10 @@
 library pagarme_card;
 
 class PagarMeCard {
-  String cardNumber;
-  String cardHolderName;
-  String cardExpirationDate;
-  String cardCvv;
+  String? cardNumber;
+  String? cardHolderName;
+  String? cardExpirationDate;
+  String? cardCvv;
 
   PagarMeCard(
       {this.cardNumber,
@@ -16,7 +16,7 @@ class PagarMeCard {
       this.cardExpirationDate,
       this.cardCvv});
 
-  String getCardNumber() {
+  String? getCardNumber() {
     return this.cardNumber;
   }
 
@@ -24,7 +24,7 @@ class PagarMeCard {
     this.cardNumber = cardNumber;
   }
 
-  String getCardHolderName() {
+  String? getCardHolderName() {
     return this.cardHolderName;
   }
 
@@ -32,7 +32,7 @@ class PagarMeCard {
     this.cardHolderName = cardHolderName;
   }
 
-  String getCardExpirationDate() {
+  String? getCardExpirationDate() {
     return this.cardExpirationDate;
   }
 
@@ -40,7 +40,7 @@ class PagarMeCard {
     this.cardExpirationDate = cardExpirationDate;
   }
 
-  String getCardCvv() {
+  String? getCardCvv() {
     return this.cardCvv;
   }
 

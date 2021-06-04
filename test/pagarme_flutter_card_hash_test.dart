@@ -1,5 +1,7 @@
 /// A (very) basic test class.
 
+import 'dart:async';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pagarme_flutter_card_hash/api/pagarme_api.dart';
 import 'package:pagarme_flutter_card_hash/encryption/pagarme_encrypt.dart';
@@ -20,8 +22,8 @@ void main() {
     test('generateEncryptionKeyAndId', () async {
       PagarMeApi pagarMeApi = PagarMeApi(pagarMeApiKey: pagarMeApiKey);
 
-      PagarMePublicKey pagarMePublicKey =
-          await pagarMeApi.generateEncryptionKeyAndId();
+      PagarMePublicKey pagarMePublicKey = await (pagarMeApi
+          .generateEncryptionKeyAndId() as FutureOr<PagarMePublicKey>);
 
       expect(pagarMePublicKey.id != null, true);
     });
@@ -31,8 +33,8 @@ void main() {
     test('generateCardHash', () async {
       PagarMeApi pagarMeApi = PagarMeApi(pagarMeApiKey: pagarMeApiKey);
 
-      PagarMePublicKey pagarMePublicKey =
-          await pagarMeApi.generateEncryptionKeyAndId();
+      PagarMePublicKey pagarMePublicKey = await (pagarMeApi
+          .generateEncryptionKeyAndId() as FutureOr<PagarMePublicKey>);
 
       expect(pagarMePublicKey.id != null, true);
 
