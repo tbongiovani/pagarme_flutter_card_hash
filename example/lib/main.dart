@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key? key, required this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -150,23 +150,23 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         Padding(
           padding: EdgeInsets.all(10.0),
-          child: RaisedButton(
-            shape: StadiumBorder(),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: <Widget>[
-                Text(
-                  'Generate Card hash',
-                  style: TextStyle(color: Colors.blue),
-                  textAlign: TextAlign.center,
-                )
-              ],
-            ),
-            color: Colors.white,
-            onPressed: () {
-              _generateCardHash();
-            },
-          ), // This trailing comma makes auto-formatting nicer for build methods.,
+          // child: RaisedButton(
+          //   shape: StadiumBorder(),
+          //   child: Row(
+          //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //     children: <Widget>[
+          //       Text(
+          //         'Generate Card hash',
+          //         style: TextStyle(color: Colors.blue),
+          //         textAlign: TextAlign.center,
+          //       )
+          //     ],
+          //   ),
+          //   color: Colors.white,
+          //   onPressed: () {
+          //     _generateCardHash();
+          //   },
+          // ), // This trailing comma makes auto-formatting nicer for build methods.,
         )
       ],
     );
